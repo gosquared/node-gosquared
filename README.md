@@ -6,7 +6,7 @@ It can be used as an easy proxy so you don't expose your API Key too.
 
 ## Usage
 ```javascript
-var GoSquared = require('node-gosquared');
+var GoSquared = require('gosquared');
 
 var gosquared = new GoSquared({
   api_key: 'demo',
