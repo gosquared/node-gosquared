@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Use the GoSquared API with ease in Node apps",
   "main": "lib/gosquared.js",
-  "repository": "",
+  "repository": "git@github.com:simontabor/node-gosquared.git",
   "keywords": [
     "gosquared",
     "API"
