@@ -5,7 +5,6 @@ This node module works with the [GoSquared API](https://www.gosquared.com/develo
 It can be used as an easy proxy so you don't expose your API Key too.
 
 ## Installation
-(not yet published on npm so this won't work)
 ```bash
 npm install --save gosquared
 ```
