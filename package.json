@@ -1,0 +1,16 @@
+{
+  "name": "gosquared",
+  "version": "0.0.1",
+  "description": "Use the GoSquared API with ease in Node apps",
+  "main": "lib/gosquared.js",
+  "repository": "",
+  "keywords": [
+    "gosquared",
+    "API"
+  ],
+  "author": "Simon Tabor",
+  "license": "BSD",
+  "dependencies": {
+    "request": "~2.12.0"
+  }
+}
