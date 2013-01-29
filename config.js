@@ -22,17 +22,12 @@ module.exports = {
   api: {
     functions: [
       "aggregateStats",
-      "alertPreferences",
       "campaigns",
       "concurrents",
       "engagement",
-      "events",
-      "expandUrl",
-      "fullDump",
       "functions",
       "geo",
       "ignoredVisitors",
-      "notifications",
       "organics",
       "overview",
       "pages",
@@ -41,7 +36,6 @@ module.exports = {
       "sites",
       "time",
       "timeSeries",
-      "trends",
       "visitors"
       ]
   }

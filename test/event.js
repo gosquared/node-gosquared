@@ -2,8 +2,8 @@ var GoSquared = require('../lib/gosquared'),
     should = require('should');
 
 var GS,
-    SITE_TOKEN = process.env.SITE_TOKEN,
-    API_KEY = process.env.API_KEY;
+    SITE_TOKEN = process.env.siteToken,
+    API_KEY = process.env.apiKey;
 
 before(function(){
   should.exist(SITE_TOKEN);
@@ -11,7 +11,7 @@ before(function(){
   GS = new GoSquared({
     siteToken: SITE_TOKEN,
     apiKey: API_KEY,
-    debugLevel: 'ALL'
+    debugLevel: process.env.verbosity
   });
 });
 

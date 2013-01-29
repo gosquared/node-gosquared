@@ -19,7 +19,7 @@
       "email": "simontabor@gosquared.com",
       "url": "http://simontabor.com"
     }
-  ]
+  ],
   "license": "MIT",
   "devDependencies": {
     "mocha": "~1.8.1",
