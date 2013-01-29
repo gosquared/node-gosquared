@@ -1,6 +1,6 @@
 # node-gosquared
 
-This node module works with the [GoSquared API](api-docs), making it really easy to integrate GoSquared with your node app.
+This node module works with the [GoSquared API][api-docs], making it really easy to integrate GoSquared with your node app.
 
 It can be used as an easy proxy for frontend JavaScript so you don't publically expose your API Key.
 
@@ -17,7 +17,7 @@ var gosquared = new GoSquared(opts);
 
 ##### Options
 
-* api_key: API key from your [account](casa). Required for API functions, not required for tracking functions.
+* api_key: API key from your [account][casa]. Required for API functions, not required for tracking functions.
 * site_token: Token for the registered site you're working with. Required.
 * requestTimeout: Maximum time in ms an API request can be pending. Default 2000ms
 * debugLevel: One of 'TRACE', 'NOTICE', 'WARNING', 'ALL'. Default 'WARNING'
@@ -37,7 +37,7 @@ gosquared.concurrents(function(e,data) {
 });
 ```
 
-All functions listed in the [API documentation](api-docs) are methods you can call on the ```gosquared``` object.
+All functions listed in the [API documentation][api-docs] are methods you can call on the ```gosquared``` object.
 
 
 ### Tracking

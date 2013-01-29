@@ -10,4 +10,4 @@ test-events:
 test-api-functions:
 	siteToken=$(SITE_TOKEN) apiKey=$(API_KEY) verbosity=$(VERBOSITY) ./node_modules/mocha/bin/mocha ./test/apiFunctions.js
 
-.PHONY: test-events
+.PHONY: test-events test-api-functions
