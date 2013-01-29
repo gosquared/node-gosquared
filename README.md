@@ -10,6 +10,18 @@ npm install --save gosquared
 ```
 
 ## Usage
+
+```javascript 
+var gosquared = new GoSquared(opts);
+```
+
+##### Options
+
+* api_key: API key from your [account](casa). Required for API functions, not required for tracking functions.
+* site_token: Token for the registered site you're working with. Required.
+* requestTimeout: Maximum time in ms an API request can be pending. Default 2000ms
+* debugLevel: One of 'TRACE', 'NOTICE', 'WARNING', 'ALL'. Default 'ALL'
+
 ### API
 ```javascript
 var GoSquared = require('gosquared');
@@ -26,19 +38,6 @@ gosquared.concurrents(function(e,data) {
 ```
 
 All functions listed in the [API documentation](api-docs) are methods you can call on the ```gosquared``` object.
-
-
-##### Options
-```javascript 
-new GoSquared(opts)
-```
-
-Options:
-
-* api_key: API key from your [account](casa). Required for API functions, not required for tracking functions.
-* site_token: Token for the registered site you're working with. Required.
-* requestTimeout: Maximum time in ms an API request can be pending. Default 2000ms
-* debugLevel: One of 'TRACE', 'NOTICE', 'WARNING', 'ALL'. Default 'ALL'
 
 
 ### Tracking
