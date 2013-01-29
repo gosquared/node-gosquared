@@ -20,7 +20,7 @@ var gosquared = new GoSquared(opts);
 * api_key: API key from your [account](casa). Required for API functions, not required for tracking functions.
 * site_token: Token for the registered site you're working with. Required.
 * requestTimeout: Maximum time in ms an API request can be pending. Default 2000ms
-* debugLevel: One of 'TRACE', 'NOTICE', 'WARNING', 'ALL'. Default 'ALL'
+* debugLevel: One of 'TRACE', 'NOTICE', 'WARNING', 'ALL'. Default 'WARNING'
 
 ### API
 ```javascript
