@@ -1,6 +1,6 @@
 # node-gosquared
 
-This node module works with the [GoSquared API](https://www.gosquared.com/developer), making it really easy to integrate GoSquared with your node app.
+This node module works with the [GoSquared API](api-docs), making it really easy to integrate GoSquared with your node app.
 
 It can be used as an easy proxy for frontend JavaScript so you don't publically expose your API Key.
 
@@ -29,7 +29,10 @@ All functions listed in the [API documentation](api-docs) are methods you can ca
 
 
 ##### Options
-```javascript new GoSquared(opts)```
+```javascript 
+new GoSquared(opts)
+```
+
 Options:
 
 * api_key: API key from your [account](casa). Required for API functions, not required for tracking functions.
@@ -44,12 +47,12 @@ Options:
 Send events to GoSquared:
 
 ```javascript
-gosquared.storeEvent('Test Event', {its: true, any: 'event', parameters: 'You Like' })
+gosquared.storeEvent('Test Event', {its: true, 'you can': 'store', any: 'event', properties: 'You Like' });
 ```
 
 
 ## Run tests
-Install all dependencies using ```bash npm install``` then:
+Install all dependencies using ```npm install``` then:
 
 ```bash
 make test

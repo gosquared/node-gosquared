@@ -1,5 +1,6 @@
 var GoSquared = require('../lib/gosquared'),
-    should = require('should');
+    should = require('should'),
+    th = require('../lib/testHelpers');
 
 var GS,
     SITE_TOKEN = process.env.siteToken,
@@ -17,6 +18,6 @@ before(function(){
 
 describe('Events', function(){
   it('can be stored using storeEvent', function(done){
-    GS.storeEvent('Test Event', done);
+    GS.storeEvent('Test Event', th.testResponse.bind(this, done));
   });
 });

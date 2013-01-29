@@ -1,6 +1,7 @@
 var GoSquared = require('../lib/gosquared'),
     should = require('should'),
-    config = require('../config');
+    config = require('../config'),
+    th = require('../lib/testHelpers');
 
 var GS,
     SITE_TOKEN = process.env.siteToken,
@@ -19,7 +20,7 @@ before(function(){
 describe('API functions', function(){
   config.api.functions.forEach(function(fName){
     it(fName, function(fName, done){
-      GS[fName](done);
+      GS[fName](th.testResponse.bind(this, done));
     }.bind(this, fName));
   });
 });
