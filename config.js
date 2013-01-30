@@ -4,7 +4,7 @@ module.exports = {
       protocol: 'https',
       host: 'data.gosquared.com',
       port: 443,
-      method: 'GET'
+      method: 'POST'
     },
 
     api: {
