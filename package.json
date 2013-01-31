@@ -18,6 +18,11 @@
       "name": "Simon Tabor",
       "email": "simontabor@gosquared.com",
       "url": "http://simontabor.com"
+    },
+    {
+      "name": "JT",
+      "email": "jt@gosquared.com",
+      "url": "http://floopily.com"
     }
   ],
   "license": "MIT",
