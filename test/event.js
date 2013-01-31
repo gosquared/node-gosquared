@@ -17,7 +17,29 @@ before(function(){
 });
 
 describe('Events', function(){
-  it('can be stored using storeEvent', function(done){
+  it('can be stored without parameters', function(done){
     GS.storeEvent('Test Event', th.testResponse.bind(this, done));
+  });
+
+  it('can be stored with parameters', function(done){
+    var params = {
+      some: 'test',
+      parameters: 'which',
+      are: 'really',
+      cool: true
+    };
+    GS.storeEvent('Test Event', params, th.testResponse.bind(this, done));
+  });
+
+  it('errors if trying to store a mahoosive parameters object', function(done){
+    var params = {};
+    var gen = function(o, max){
+      var oSize = Object.keys(o).length;
+      if(oSize > max) return o;
+      o[oSize] = new Array(~~(Math.random()*100)).join('-');
+      return gen(o, max);
+    };
+    gen(params, 25);
+    GS.storeEvent('Test Event', params, th.testResponse.bind(this, done));
   });
 });
