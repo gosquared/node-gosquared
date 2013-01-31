@@ -1,6 +1,6 @@
 SITE_TOKEN ?= GSN-181546-E
 API_KEY ?= demo
-VERBOSITY ?= WARNING
+VERBOSITY ?= FATAL
 RUNNER ?= ./node_modules/mocha/bin/mocha
 
 run = siteToken=$(SITE_TOKEN) \

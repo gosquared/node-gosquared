@@ -17,6 +17,10 @@ before(function(){
 });
 
 describe('Events', function(){
+  it('cannot be stored without a name', function(done){
+    GS.storeEvent(null, th.testError.bind(this, done));
+  });
+
   it('can be stored without parameters', function(done){
     GS.storeEvent('Test Event', th.testResponse.bind(this, done));
   });
@@ -40,6 +44,6 @@ describe('Events', function(){
       return gen(o, max);
     };
     gen(params, 25);
-    GS.storeEvent('Test Event', params, th.testResponse.bind(this, done));
+    GS.storeEvent('Test Event', params, th.testError.bind(this, done));
   });
 });
