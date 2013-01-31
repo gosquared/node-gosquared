@@ -46,7 +46,17 @@ All functions listed in the [API documentation][api-docs] are methods you can ca
 Send events to GoSquared:
 
 ```javascript
-gosquared.storeEvent('Test Event', {its: true, 'you can': 'store', any: 'event', properties: 'You Like' });
+gosquared.storeEvent('Test Event', {
+		its: true,
+		'you can': 'store',
+		any: 'event',
+		properties: 'You Like'
+	},
+	function(e, res){
+		if(e) return console.log(e);
+		console.log(res);
+	}
+);
 ```
 
 
