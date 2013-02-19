@@ -3,8 +3,8 @@ API_KEY ?= demo
 VERBOSITY ?= FATAL
 RUNNER ?= ./node_modules/mocha/bin/mocha
 
-run = siteToken=$(SITE_TOKEN) \
-	apiKey=$(API_KEY) \
+run = site_token=$(SITE_TOKEN) \
+	api_key=$(API_KEY) \
 	verbosity=$(VERBOSITY) \
 	dataEndpoint=$(DATA_ENDPOINT) \
 	apiEndpoint=$(API_ENDPOINT) \
