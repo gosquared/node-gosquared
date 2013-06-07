@@ -1,6 +1,6 @@
 {
   "name": "gosquared",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "GoSquared for your Node.JS application",
   "main": "lib/gosquared.js",
   "repository": "git@github.com:gosquared/node-gosquared.git",
