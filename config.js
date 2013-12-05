@@ -34,23 +34,45 @@ module.exports = {
   },
 
   api: {
-    functions: [
-      "aggregateStats",
-      "campaigns",
-      "concurrents",
-      "engagement",
-      "functions",
-      "geo",
-      "ignoredVisitors",
-      "organics",
-      "overview",
-      "pages",
-      "referrers",
-      "reportPreferences",
-      "sites",
-      "time",
-      "timeSeries",
-      "visitors"
+    'account': {
+      'def': 'v1',
+      'v1': [
+        "alertPreferences",
+        "ignoredVisitors",
+        "reportPreferences",
+        "sites"
       ]
+    },
+    'now': {
+      'def': 'v3',
+      'v3': [
+        "aggregateStats",
+        "campaigns",
+        "concurrents",
+        "engagement",
+        "geo",
+        "overview",
+        "pages",
+        "sources",
+        "timeSeries",
+        "visitors"
+      ]
+    },
+    'trends': {
+      'def': 'v2',
+      'v2': [
+        "aggregate",
+        "browser",
+        "country",
+        "event",
+        "language",
+        "organisation",
+        "os",
+        "page",
+        "path1",
+        "screenDimensions",
+        "sources"
+      ]
+    }
   }
 };
