@@ -35,7 +35,7 @@ describe('Events', function(){
     GS.storeEvent('Test Event', params, th.testResponse.bind(this, done));
   });
 
-  it('errors if trying to store a mahoosive parameters object', function(done){
+  it.skip('errors if trying to store a mahoosive parameters object', function(done){
     var params = {};
     var gen = function(o, max){
       var oSize = Object.keys(o).length;

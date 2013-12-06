@@ -2,13 +2,14 @@ SITE_TOKEN ?= GSN-181546-E
 API_KEY ?= demo
 VERBOSITY ?= FATAL
 RUNNER ?= ./node_modules/mocha/bin/mocha
+REPORTER ?= list
 
 run = site_token=$(SITE_TOKEN) \
 	api_key=$(API_KEY) \
 	verbosity=$(VERBOSITY) \
 	dataEndpoint=$(DATA_ENDPOINT) \
 	apiEndpoint=$(API_ENDPOINT) \
-	$(RUNNER) $(1)
+	$(RUNNER) -R $(REPORTER) $(1)
 
 test: test-events test-api-functions
 

@@ -24,10 +24,11 @@ describe('API functions', function(){
       if (version === 'def') continue;
 
       var v = n[version];
-      for (var i = 0; i < v.length; v++) {
-        it(v[i], function(vi, done) {
-          GS[vi](th.testResponse.bind(this, done));
-        }.bind(this, v[i]));
+      for (var i = 0; i < v.length; i++) {
+        var func = v[i];
+        it('/' + namespace + '/' + version + '/' + func, function(namespace, version, func, done) {
+          GS[func](th.testResponse.bind(this, done));
+        }.bind(this, namespace, version, func));
       }
     }
   }
