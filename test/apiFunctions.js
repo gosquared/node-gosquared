@@ -18,9 +18,17 @@ before(function(){
 });
 
 describe('API functions', function(){
-  config.api.functions.forEach(function(fName){
-    it(fName, function(fName, done){
-      GS[fName](th.testResponse.bind(this, done));
-    }.bind(this, fName));
-  });
+  for (var namespace in config.api) {
+    var n = config.api[namespace];
+    for (var version in n) {
+      if (version === 'def') continue;
+
+      var v = n[version];
+      for (var i = 0; i < v.length; v++) {
+        it(v[i], function(vi, done) {
+          GS[vi](th.testResponse.bind(this, done));
+        }.bind(this, v[i]));
+      }
+    }
+  }
 });

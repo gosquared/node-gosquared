@@ -6,7 +6,8 @@
   "repository": "git@github.com:gosquared/node-gosquared.git",
   "keywords": [
     "gosquared",
-    "API"
+    "API",
+    "analytics"
   ],
   "contributors": [
     {
