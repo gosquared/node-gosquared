@@ -1,6 +1,6 @@
 {
   "name": "gosquared",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "GoSquared for your Node.JS application",
   "main": "lib/gosquared.js",
   "repository": "git@github.com:gosquared/node-gosquared.git",
@@ -17,7 +17,7 @@
     },
     {
       "name": "Simon Tabor",
-      "email": "simontabor@gosquared.com",
+      "email": "simon@gosquared.com",
       "url": "http://simontabor.com"
     },
     {
