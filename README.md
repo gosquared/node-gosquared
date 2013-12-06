@@ -11,7 +11,7 @@ npm install --save gosquared
 
 ## Usage
 
-```javascript 
+```javascript
 var gosquared = new GoSquared(opts);
 ```
 
@@ -73,5 +73,5 @@ Optionally, you can run the tests with a site token and API key of your choice:
 SITE_TOKEN=<your token> API_KEY=<your api key> make test
 ```
 
-[api-docs]: https://www.gosquared.com/developer/latest/
+[api-docs]: https://www.gosquared.com/developer/api/
 [casa]: https://www.gosquared.com/home/developer
