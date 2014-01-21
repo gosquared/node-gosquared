@@ -11,7 +11,7 @@ run = site_token=$(SITE_TOKEN) \
 	apiEndpoint=$(API_ENDPOINT) \
 	$(RUNNER) -R $(REPORTER) $(1)
 
-test: test-events test-api-functions
+test: test-events test-transactions test-api-functions
 
 test-events:
 	$(call run,./test/event.js)
