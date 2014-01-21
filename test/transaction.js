@@ -42,4 +42,18 @@ describe('Transaction', function(){
 
     t.record(done);
   });
+
+  it('can override revenue and quantity', function(done){
+    var t = GS.createTransaction(12345678);
+    t.addItem({
+      name: 'node-gosquared test',
+      price: 1.99,
+      quantity: 1
+    });
+
+    t.revenue = 10;
+    t.quantity = 5;
+
+    t.record(done);
+  });
 });
