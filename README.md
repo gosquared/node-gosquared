@@ -64,7 +64,7 @@ To record a transaction:
 
 ```javascript
 var transactionID = 123456789
-var t = GS.createTransaction(transationID);
+var t = gosquared.createTransaction(transationID);
 
 // Make sure each item has a name
 t.addItem({
