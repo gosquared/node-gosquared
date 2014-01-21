@@ -1,5 +1,5 @@
-var URL = require('url'),
-    h = require('./lib/helpers');
+var URL = require('url');
+var h = require('./lib/helpers');
 
 var endpoints = {
   data: {

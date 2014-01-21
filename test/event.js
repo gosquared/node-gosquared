@@ -1,6 +1,6 @@
-var GoSquared = require('../lib/gosquared'),
-    should = require('should'),
-    th = require('../lib/testHelpers');
+var GoSquared = require('../lib/GoSquared');
+var should = require('should');
+var th = require('../lib/testHelpers');
 
 var GS,
     SITE_TOKEN = process.env.site_token,
@@ -18,11 +18,11 @@ before(function(){
 
 describe('Events', function(){
   it('cannot be stored without a name', function(done){
-    GS.storeEvent(null, th.testError.bind(this, done));
+    GS.event(null, th.testError.bind(this, done));
   });
 
   it('can be stored without parameters', function(done){
-    GS.storeEvent('Test Event', th.testResponse.bind(this, done));
+    GS.event('Test Event', th.testResponse.bind(this, done));
   });
 
   it('can be stored with parameters', function(done){
@@ -32,7 +32,7 @@ describe('Events', function(){
       are: 'really',
       cool: true
     };
-    GS.storeEvent('Test Event', params, th.testResponse.bind(this, done));
+    GS.event('Test Event', params, th.testResponse.bind(this, done));
   });
 
   it.skip('errors if trying to store a mahoosive parameters object', function(done){
@@ -44,6 +44,6 @@ describe('Events', function(){
       return gen(o, max);
     };
     gen(params, 25);
-    GS.storeEvent('Test Event', params, th.testError.bind(this, done));
+    GS.event('Test Event', params, th.testError.bind(this, done));
   });
 });
