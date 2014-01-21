@@ -97,6 +97,19 @@ t.record(function(){
 
 ```
 
+GoSquared automatically calculates the total revenue and quantity for each transaction by summing these values of each item. If you would like to override the total transaction revenue and quantity, you can do the following:
+
+```javascript
+// Override revenue and quantity amounts before t.record()
+
+var customRevenue = 10;
+var customQuantity = 5
+t.revenue = customRevenue;
+t.quantity = customQuantity;
+
+t.record();
+```
+
 #### Events
 
 Send events to GoSquared:
