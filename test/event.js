@@ -2,9 +2,9 @@ var GoSquared = require('../lib/GoSquared');
 var should = require('should');
 var th = require('../lib/testHelpers');
 
-var GS,
-    SITE_TOKEN = process.env.site_token,
-    API_KEY = process.env.api_key;
+var GS;
+var SITE_TOKEN = process.env.site_token;
+var API_KEY = process.env.api_key;
 
 before(function(){
   should.exist(SITE_TOKEN);

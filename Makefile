@@ -19,4 +19,7 @@ test-events:
 test-api-functions:
 	$(call run,./test/apiFunctions.js)
 
+test-transactions:
+	$(call run,./test/transaction.js)
+
 .PHONY: test-events test-api-functions
