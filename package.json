@@ -2,7 +2,7 @@
   "name": "gosquared",
   "version": "0.3.0",
   "description": "GoSquared for your Node.JS application",
-  "main": "lib/gosquared.js",
+  "main": "lib/GoSquared.js",
   "repository": "git@github.com:gosquared/node-gosquared.git",
   "keywords": [
     "gosquared",
