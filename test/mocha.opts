@@ -1,2 +1,3 @@
 --require should
---timeout 60000
+--timeout 6000
+--bail

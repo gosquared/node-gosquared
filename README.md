@@ -60,15 +60,14 @@ The module can also be used to send data to GoSquared.
 
 #### Transactions
 
-To record a transaction:
+To track a transaction:
 
 ```javascript
-var transactionID = 123456789
+var transactionID = 123456789;
 var t = gosquared.createTransaction(transationID);
 
 // Make sure each item has a name
-t.addItem({
-	name: 'Beer',
+t.addItem('Beer', {
 	price: 3.50,
 	quantity: 1,
 	category: 'Alcoholic Drinks'
@@ -76,38 +75,40 @@ t.addItem({
 
 // You can also add multiple items at once
 t.addItems([
-{
-	name: 'More Beer',
-	price: 4.99,
-	quantity: 2,
-	category: 'Alcoholic Drinks'
-},
-{
-	name: 'Limoncello',
-	price: 17.99,
-	quantity: 1,
-	category: 'Liquor'
-}
+	{
+		name: 'More Beer',
+		price: 4.99,
+		quantity: 2,
+		category: 'Alcoholic Drinks'
+	},
+	{
+		name: 'Limoncello',
+		price: 17.99,
+		quantity: 1,
+		category: 'Liquor'
+	}
 ]);
 
 // Send off to GoSquared
-t.record(function(){
+t.track(function(){
 	// Done
 });
 
 ```
 
-GoSquared automatically calculates the total revenue and quantity for each transaction by summing these values of each item. If you would like to override the total transaction revenue and quantity, you can do the following:
+GoSquared automatically calculates the total revenue and quantity for each transaction by summing these values of each item. If you would like to override the total transaction revenue and quantity, you can set them as transaction options:
 
 ```javascript
-// Override revenue and quantity amounts before t.record()
+// Override revenue and quantity amounts
 
-var customRevenue = 10;
-var customQuantity = 5
-t.revenue = customRevenue;
-t.quantity = customQuantity;
+var opts = {
+	customRevenue: 10,
+	customQuantity: 5
+};
 
-t.record();
+var t = gosquared.createTransaction(transactionID, opts);
+
+t.track();
 ```
 
 #### Events
