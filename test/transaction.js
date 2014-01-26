@@ -124,4 +124,21 @@ describe('Transaction', function(){
 
     t.track(done);
   });
+
+  it('can include additional customer attributes', function(done){
+    var t = GS.createTransaction(th.genTransactionID(), {
+      ua: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36',
+      ip: '8.8.8.8',
+      la: 'en-gb',
+      ru: 'http://www.gosquared.com/ecommerce/'
+    });
+
+    t.addItem({
+      name: 'node-gosquared-test',
+      price: 1.99,
+      quantity: 1
+    });
+
+    t.track(done);
+  });
 });

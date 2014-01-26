@@ -54,7 +54,7 @@ gosquared.now.v3.concurrents(function(e,data) {
 All functions listed in the [API documentation][api-docs] are methods you can call on the ```gosquared``` object. The documentation also demonstrates the response data you can expect to get back.
 
 
-### Recording data with this module
+### Recording data
 
 The module can also be used to send data to GoSquared.
 
@@ -109,6 +109,34 @@ var opts = {
 var t = gosquared.createTransaction(transactionID, opts);
 
 t.track();
+```
+
+##### Including additional info
+
+One of the features of GoSquared Ecommerce is the ability to attribute revenue and quantity amounts to aspects of the customer, such as their country, language, browser or referring source. Although GoSquared is not able to automatically detect these for backend-triggered events, you can pass in the values GoSquared needs for this functionality.
+
+To do this, include any of the following in the transaction's options object:
+
+```javascript
+var userAgent = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36'; // The browser's user agent
+var ip = '0.0.0.0'; // The cusomer's IP address. IPv4 or IPv6
+var language = 'en-gb'; // The customer's ISO 639-1 language string
+var referringURL = 'http://www.gosquared.com/ecommerce/'; // The referring URL of the customer's visit
+
+var previousTransaction = {
+	ts: Date.now() // The UNIX timestamp in ms of the customer's previous transaction, if any
+};
+
+var opts = {
+	ua: userAgent,
+	ip: ip,
+	la: language,
+	ru: referringURL,
+	pt: previousTransaction
+};
+
+var t = gosquared.createTransaction(transactionID, opts);
+
 ```
 
 #### Events
