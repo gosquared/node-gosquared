@@ -102,8 +102,8 @@ GoSquared automatically calculates the total revenue and quantity for each trans
 // Override revenue and quantity amounts
 
 var opts = {
-	customRevenue: 10,
-	customQuantity: 5
+	revenue: 10,
+	quantity: 5
 };
 
 var t = gosquared.createTransaction(transactionID, opts);
