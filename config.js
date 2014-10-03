@@ -3,16 +3,12 @@ var h = require('./lib/helpers');
 
 var endpoints = {
   data: {
-    protocol: 'https:',
-    hostname: 'data.gosquared.com',
-    port: 443,
+    url: 'https://data.gosquared.com',
     method: 'POST'
   },
 
   api: {
-    protocol: 'https:',
-    hostname: 'api.gosquared.com',
-    port: 443,
+    url: 'https://api.gosquared.com',
     method: 'GET'
   }
 };

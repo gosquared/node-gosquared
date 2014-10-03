@@ -1,6 +1,6 @@
 {
   "name": "gosquared",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "GoSquared for your Node.JS application",
   "main": "lib/GoSquared.js",
   "repository": "git@github.com:gosquared/node-gosquared.git",
@@ -27,6 +27,9 @@
     }
   ],
   "license": "MIT",
+  "dependencies": {
+    "request": "^2.44.0"
+  },
   "devDependencies": {
     "mocha": "~1.8.1",
     "should": "~1.2.1"

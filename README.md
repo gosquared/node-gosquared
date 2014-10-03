@@ -1,6 +1,6 @@
 # node-gosquared
 
-This lightweight, zero-dependency module allows you to integrate the [GoSquared API][api-docs] into your Node.JS app with ease.
+This lightweight module allows you to integrate the [GoSquared API][api-docs] into your Node.JS app with ease.
 
 Commonly, you'll use this module to retrieve analytics data collected by GoSquared, but it can also be used to manage accounts, store events, and record transactions for GoSquared Ecommerce.
 
