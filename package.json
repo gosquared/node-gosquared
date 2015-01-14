@@ -7,7 +7,9 @@
   "keywords": [
     "gosquared",
     "API",
-    "analytics"
+    "analytics",
+    "tracking",
+    "retrieval"
   ],
   "contributors": [
     {
@@ -28,10 +30,16 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "request": "^2.44.0"
+    "request": "^2.51.0"
   },
   "devDependencies": {
-    "mocha": "~1.8.1",
-    "should": "~1.2.1"
+    "async": "^0.9.0",
+    "mocha": "~1.8.1"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "test-tracking": "./node_modules/mocha/bin/mocha test/tracking",
+    "test-retrieval": "./node_modules/mocha/bin/mocha test/retrieval",
+    "test-account": "./node_modules/mocha/bin/mocha test/account"
   }
 }
