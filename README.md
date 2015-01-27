@@ -1,6 +1,6 @@
 # node-gosquared
 
-The official GoSquared Node.js module for integrating the [GoSquared API](docs) into your Node.JS app with ease.
+The official GoSquared Node.js module for integrating the [GoSquared API][docs] into your Node.JS app with ease.
 
 ## Installation
 
