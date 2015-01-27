@@ -6,10 +6,14 @@
   "repository": "git@github.com:gosquared/node-gosquared.git",
   "keywords": [
     "gosquared",
-    "API",
+    "people",
+    "user",
+    "event",
     "analytics",
     "tracking",
-    "retrieval"
+    "reporting",
+    "metrics",
+    "API"
   ],
   "contributors": [
     {
