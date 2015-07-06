@@ -61,5 +61,5 @@ SITE_TOKEN=<your site token> API_KEY=<your api key> npm test-retrieval
 ```
 
 [reporting-docs]: https://gosquared.com/developer/api/
-[tracking-docs]: https://beta.gosquared.com/docs/tracking/api/
-[docs]: https://beta.gosquared.com/docs
+[tracking-docs]: https://gosquared.com/docs/tracking/api/
+[docs]: https://gosquared.com/docs
