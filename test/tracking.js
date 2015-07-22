@@ -14,45 +14,96 @@ var testSuccess = function(cb) {
 var testFail = utils.testFail;
 
 describe('People', function() {
-  it('identify', function(done) {
-    var p = gosquared.createPerson();
-    var props = {
-      name: 'Node GoSquared',
-      email: 'test-node@gosquared.com',
-      custom: {
-        test_node_gosquared: 'identify'
-      }
-    };
-    p.identify('test-node-gosquared', props, testSuccess(done));
-  });
-
-  it('props', function(done) {
-    var p = gosquared.createPerson('test-node-gosquared');
-    var props = {
-      custom: {
-        test_node_gosquared: 'props'
-      }
-    };
-    p.setProperties(props, testSuccess(done));
-  });
-
-  it('alias', function(done) {
-    var p = gosquared.createPerson();
-    p.identify('test-node-gosquared-pre-alias', {
-      name: 'Node GoSquared Pre Alias'
+  describe('#identify', function() {
+    it('works', function(done) {
+      var p = gosquared.createPerson();
+      var props = {
+        id: 'test-node-gosquared',
+        name: 'Node GoSquared',
+        email: 'test-node@gosquared.com',
+        custom: {
+          test_node_gosquared: 'identify'
+        }
+      };
+      p.identify(props, testSuccess(done));
     });
-    p.alias('test-node-gosquared-alias', testSuccess(done));
+
+    it('works with an email', function(done) {
+      var p = gosquared.createPerson();
+      var props = {
+        name: 'Node GoSquared',
+        email: 'test-node@gosquared.com',
+        custom: {
+          test_node_gosquared: 'identify'
+        }
+      };
+      p.identify(props, testSuccess(done));
+    });
+
+    it('fails without an id and email', function(done) {
+      var p = gosquared.createPerson();
+      var props = {
+        name: 'Node GoSquared',
+        custom: {
+          test_node_gosquared: 'identify'
+        }
+      };
+      p.identify(props, testFail(done));
+    });
   });
 
-  it('event', function(done) {
-    var p = gosquared.createPerson('test-node-gosquared');
-    p.trackEvent('test_node_gosquared_event', testSuccess(done));
+  describe('#setProperties', function() {
+    it('works', function(done) {
+      var p = gosquared.createPerson();
+      var props = {
+        id: 'test-node-gosquared',
+        custom: {
+          test_node_gosquared: 'props'
+        }
+      };
+      p.setProperties(props, testSuccess(done));
+    });
+
+    it('works with an anonymousID', function(done) {
+      var p = gosquared.createPerson();
+      p.anonymousID = 'test';
+      var props = {
+        custom: {
+          test_node_gosquared: 'props'
+        }
+      };
+      p.setProperties(props, testSuccess(done));
+    });
+
+    it('doesn\'t work without an ID', function(done) {
+      var p = gosquared.createPerson();
+      var props = {
+        custom: {
+          test_node_gosquared: 'props'
+        }
+      };
+      p.setProperties(props, testFail(done));
+    });
   });
 
-  it('transaction', function(done) {
-    var p = gosquared.createPerson('test-node-gosquared');
-    var t = p.createTransaction(utils.makeTransactionID());
-    t.track(testSuccess(done));
+  describe('#trackEvent', function() {
+    it('works', function(done) {
+      var p = gosquared.createPerson('test-node-gosquared');
+      p.trackEvent('test_node_gosquared_event', testSuccess(done));
+    });
+
+    it('doesn\'t work without an ID', function(done) {
+      var p = gosquared.createPerson();
+      p.trackEvent('test_node_gosquared_event', testFail(done));
+    });
+  });
+
+  describe('#createTransaction', function(done) {
+    it('works', function(done) {
+      var p = gosquared.createPerson('test-node-gosquared');
+      var t = p.createTransaction(utils.makeTransactionID());
+      t.track(testSuccess(done));
+    });
   });
 });
 
@@ -176,12 +227,9 @@ describe('Transaction', function(){
     t.track(testSuccess(done));
   });
 
-  it('can include additional customer attributes', function(done){
+  it('can include additional attributes', function(done){
     var t = gosquared.createTransaction(utils.makeTransactionID(), {
-      ua: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36',
-      ip: '8.8.8.8',
-      la: 'en-gb',
-      ru: 'http://www.gosquared.com/ecommerce/'
+      revenue: '$5.99'
     });
 
     t.addItem({
