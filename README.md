@@ -1,5 +1,7 @@
 # node-gosquared
 
+[![Join the chat at https://gitter.im/gosquared/node-gosquared](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gosquared/node-gosquared?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 The official GoSquared Node.js module for integrating the [GoSquared API][docs] into your Node.JS app with ease.
 
 ## Installation
