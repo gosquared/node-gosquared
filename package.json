@@ -37,13 +37,13 @@
     "request": "^2.51.0"
   },
   "devDependencies": {
-    "async": "^0.9.0",
-    "mocha": "~1.8.1"
+    "async": "^1.4.0",
+    "mocha": "^2.2.5"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
-    "test-tracking": "./node_modules/mocha/bin/mocha test/tracking",
-    "test-retrieval": "./node_modules/mocha/bin/mocha test/retrieval",
-    "test-account": "./node_modules/mocha/bin/mocha test/account"
+    "test": "mocha",
+    "test-tracking": "mocha test/tracking",
+    "test-retrieval": "mocha test/retrieval",
+    "test-account": "mocha test/account"
   }
 }
