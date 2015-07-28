@@ -1,5 +1,10 @@
 # node-gosquared
 
+[![Dependencies](https://david-dm.org/gosquared/node-gosquared.svg)](https://david-dm.org/gosquared/node-gosquared)
+[![Join the chat at https://gitter.im/gosquared/node-gosquared](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/gosquared/node-gosquared)
+
+[![NPM](https://nodei.co/npm/gosquared.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gosquared)
+
 The official GoSquared Node.js module for integrating the [GoSquared API][docs] into your Node.JS app with ease.
 
 ## Installation
