@@ -1,5 +1,6 @@
 # node-gosquared
 
+[![Travis](https://api.travis-ci.org/gosquared/node-gosquared.svg)](https://travis-ci.org/gosquared/node-gosquared)
 [![Dependencies](https://david-dm.org/gosquared/node-gosquared.svg)](https://david-dm.org/gosquared/node-gosquared)
 [![Join the chat at https://gitter.im/gosquared/node-gosquared](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/gosquared/node-gosquared)
 
